@@ -1,0 +1,26 @@
+@import "ress";
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+	height: 768px;
+	display: grid;
+	grid: 
+			"header" 80px
+			"body" auto
+			"footer" 240px
+			/ 1fr;
+	grid-gap: 0;
+}
+.header {
+	grid-area: header;
+	background-color: pink;
+}
+.body {
+	grid-area: body;
+	background-color: green;
+}
+.footer {
+	grid-area: footer;
+	background-color: orange;
+}
