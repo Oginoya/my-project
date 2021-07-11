@@ -1,0 +1,8 @@
+{
+	"dartsass.autoPrefixBrowsersList": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	],
+	"dartsass.targetDirectory": "/css/"
+}
