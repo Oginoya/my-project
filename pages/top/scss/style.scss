@@ -1,4 +1,4 @@
-@use "ress";
+@import "../../../assets/scss/ress";
 
 .container {
 	width: 1024px;
@@ -23,4 +23,8 @@
 .footer {
 	grid-area: footer;
 	background-color: orange;
+}
+.cc {
+	padding: 0;
+	margin: 0;
 }
