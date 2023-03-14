@@ -1,0 +1,180 @@
+/* ページ全体に適用されるスタイル */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* ヘッダーのスタイル */
+.header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+/* ナビゲーションのスタイル */
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex; /* 追加 */
+	flex-direction: row; /* 追加 */
+}
+
+.nav-item {
+	margin: 0 10px;
+}
+
+.nav-link {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* ヒーローセクションのスタイル */
+.hero {
+	background-image: url('../image/hero-image.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+}
+
+.hero-title {
+	font-size: 3em;
+	margin: 0;
+}
+
+.hero-text {
+	font-size: 1.5em;
+	margin: 0 0 20px 0;
+}
+
+.hero-cta {
+	background-color: #f00;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.hero-cta:hover {
+	background-color: #fff;
+	color: #f00;
+}
+
+/* サービスセクションのスタイル */
+.section {
+	padding: 50px;
+  }
+  
+  .section-heading {
+	margin-bottom: 50px;
+	text-align: center;
+  }
+  
+  .services, .about {
+	background-color: #f7f7f7;
+  }
+  
+  .service-card, .about-card {
+	box-sizing: border-box;
+	margin: 10px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+  }
+  
+  .service-card img, .about-card img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+  }
+  
+  .service-card h3, .about-card h3 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+  }
+  
+  .service-card p, .about-card p {
+	margin: 10px 0 0 0;
+	font-size: 16px;
+	text-align: center;
+  }
+  
+
+.services-text {
+	font-size: 1em;
+	margin: 0;
+}
+
+/* 会社情報セクションのスタイル */
+
+
+.about-text {
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+/* フッターのスタイル */
+.footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.footer-text {
+margin: 0;
+}
+
+.footer-link {
+color: #fff;
+text-decoration: none;
+}
+
+.footer-link:hover {
+	text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+	.section-body{
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	}
+  
+	.service-card, .about-card {
+	  flex: 0 0 calc(50% - 20px);
+	  margin: 10px;
+	}
+  }
+
+  @media (max-width: 767px) {
+	.section-body {
+	  display: block;
+	}
+  
+	.service-card, .about-card {
+	  margin: 10px;
+	}
+  }
+  
