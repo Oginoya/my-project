@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js-test</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+	<title>タイピングゲーム</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <h1>js-test</h1>
+	<h1>タイピングゲーム</h1>
+	<div id="game-container">
+		<div id="timer-container">
+			<p id="timer">30</p>
+		</div>
+		<div id="sentence-container">
+			<p id="sentence"></p>
+		</div>
+		<div id="input-container">
+			<input type="text" id="input">
+		</div>
+		<div id="score-container">
+			<p>Score: <span id="score">0</span></p>
+		</div>
+		<button id="startButton">スタート</button>
+		<button id="resetButton">スタート</button>
+	</div>
 
-    <p> javaScript testーーー</p>
-
-
-    <script src="js/main.js"></script>
+	<script src="./js/script.js"></script>
 </body>
 </html>

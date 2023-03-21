@@ -1,1 +1,44 @@
 /* Unique Style */
+body {
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#game-container {
+	margin: 20px auto;
+	width: 500px;
+	text-align: center;
+}
+
+#timer-container {
+	margin-bottom: 10px;
+}
+
+#input {
+	font-size: 18px;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+#score-container {
+	margin-top: 10px;
+}
+
+#start-button {
+	margin-top: 10px;
+	font-size: 20px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#start-button:hover {
+	background-color: #0062cc;
+}
