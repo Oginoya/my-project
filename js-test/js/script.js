@@ -47,78 +47,78 @@ let score = 0;
 let timeLeft = 30;
 let timerId;
 
-// ゲームをスタートする関数
-function startGame() {
-// ボタンを無効化する
-startButton.disabled = true;
+    // ゲームをスタートする関数
+    function startGame() {
+        // ボタンを無効化する
+        startButton.disabled = true;
 
-// タイマーをスタートする
-timerId = setInterval(() => {
-	timeLeft--;
-	timerElement.textContent = timeLeft;
+        // タイマーをスタートする
+        timerId = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
 
-	if (timeLeft === 0) {
-		// 時間切れの場合
-		endGame();
-	}
-}, 1000);
+            if (timeLeft === 0) {
+                // 時間切れの場合
+                endGame();
+            }
+        }, 1000);
 
-// 最初の文章を表示する
-sentenceElement.textContent = sentences[currentSentenceIndex];
+        // 最初の文章を表示する
+        sentenceElement.textContent = sentences[currentSentenceIndex];
 
-// 入力欄にフォーカスを移す
-inputElement.focus();
+        // 入力欄にフォーカスを移す
+        inputElement.focus();
 
-// 入力された文字列が正しい場合に発生するイベント
-inputElement.addEventListener('input', () => {
-	const typedText = inputElement.value;
+        // 入力された文字列が正しい場合に発生するイベント
+        inputElement.addEventListener('input', () => {
+            const typedText = inputElement.value;
 
-	if (typedText === sentences[currentSentenceIndex]) {
-		// 文字列が正しい場合
-		score++;
-		scoreElement.textContent = score;
+            if (typedText === sentences[currentSentenceIndex]) {
+                // 文字列が正しい場合
+                score++;
+                scoreElement.textContent = score;
 
-		// 入力欄をクリアする
-		inputElement.value = '';
+                // 入力欄をクリアする
+                inputElement.value = '';
 
-		// 次の文章を表示する
-		currentSentenceIndex++;
-		if (currentSentenceIndex === sentences.length) {
-			// 最後の文章までタイプし終わった場合
-			endGame();
-		} else {
-			sentenceElement.textContent = sentences[currentSentenceIndex];
-		}
-	}
-});
-}
+                // 次の文章を表示する
+                currentSentenceIndex++;
+                if (currentSentenceIndex === sentences.length) {
+                    // 最後の文章までタイプし終わった場合
+                    endGame();
+                } else {
+                    sentenceElement.textContent = sentences[currentSentenceIndex];
+                }
+            }
+        });
+    }
 
-// ゲームを終了する関数
-function endGame() {
-    // タイマーを停止する
-    clearInterval(timerId);
+    // ゲームを終了する関数
+    function endGame() {
+        // タイマーを停止する
+        clearInterval(timerId);
 
-    // ボタンを有効化する
-    startButton.disabled = false;
+        // ボタンを有効化する
+        startButton.disabled = false;
 
-    // 入力欄を無効化する
-    inputElement.disabled = true;
+        // 入力欄を無効化する
+        inputElement.disabled = true;
 
-    // リセットボタンを表示する
-    resetButton.style.display = 'inline-block';
+        // リセットボタンを表示する
+        resetButton.style.display = 'inline-block';
 
-    // 結果を表示する
-    resultElement.textContent = `スコア: ${score}`;
+        // 結果を表示する
+        resultElement.textContent = `スコア: ${score}`;
 
-    // 変数をリセットする
-    currentSentenceIndex = 0;
-    score = 0;
-    timeLeft = 30;
+        // 変数をリセットする
+        currentSentenceIndex = 0;
+        score = 0;
+        timeLeft = 30;
 
-    // 入力欄からイベントを削除する
-    inputElement.removeEventListener('input', () => {});
+        // 入力欄からイベントを削除する
+        inputElement.removeEventListener('input', () => {});
 
-}
+    }
 
 // リセットボタンをクリックした場合の処理
 resetButton.addEventListener('click', () => {
