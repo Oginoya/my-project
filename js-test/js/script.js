@@ -1,81 +1,24 @@
-const textArray = [
-  "こんにちは",
-  "おはよう",
-  "さようなら",
-  "ありがとう",
-  "おやすみ"
-];
+// APIキーを設定する
+const apiKey = "feff3ca11ea73ee6aaf2558cbb6bf067";
 
-let currentText = "";
-let score = 0;
-let timeLeft = 30;
-let intervalId = null;
+// ブラウザで位置情報を取得する
+navigator.geolocation.getCurrentPosition(position => {
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
 
-const textElement = document.getElementById("text");
-const inputElement = document.getElementById("input");
-const scoreElement = document.getElementById("score");
-const startButton = document.getElementById("start-button");
-const resetButton = document.getElementById("reset-button");
-const timeLeftElement = document.getElementById("time-left");
-
-function getRandomText() {
-  const index = Math.floor(Math.random() * textArray.length);
-  return textArray[index];
-}
-
-function updateText() {
-  currentText = getRandomText();
-  textElement.textContent = currentText;
-  inputElement.value = "";
-}
-
-function calculateScore() {
-  const correctChars = inputElement.value.split("").filter((char, i) => {
-    return char === currentText[i];
-  }).length;
-  const accuracy = correctChars / currentText.length;
-  const timeBonus = Math.max(0, timeLeft / 30);
-  const score = Math.floor(accuracy * 100 * timeBonus);
-  return score;
-}
-
-function handleInput() {
-  if (inputElement.value === currentText) {
-    score += calculateScore();
-    scoreElement.textContent = `Score: ${score}`;
-    updateText();
-  }
-}
-
-function startGame() {
-  updateText();
-  inputElement.addEventListener("input", handleInput);
-  startButton.disabled = true;
-  intervalId = setInterval(() => {
-    timeLeft -= 1;
-    timeLeftElement.textContent = timeLeft.toString();
-    if (timeLeft === 0) {
-      endGame();
-    }
-  }, 1000);
-}
-
-function resetGame() {
-  clearInterval(intervalId);
-  timeLeft = 30;
-  timeLeftElement.textContent = timeLeft.toString();
-  score = 0;
-  scoreElement.textContent = `Score: ${score}`;
-  startButton.disabled = false;
-}
-
-function endGame() {
-  clearInterval(intervalId);
-  inputElement.removeEventListener("input", handleInput);
-  const scoreText = `Final score: ${score}`;
-  alert(scoreText);
-  resetGame();
-}
-
-startButton.addEventListener("click", startGame);
-resetButton.addEventListener("click", resetGame);
+  // 天気情報を取得する
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
+    .then(response => response.json())
+    .then(data => {
+      // 天気情報を表示する
+      const weather = data.weather[0].description;
+      const temperature = data.main.temp;
+      const cityName = data.name;
+      const country = data.sys.country;
+      document.getElementById("weather").textContent = `${cityName}, ${country}: ${weather}, ${temperature}℃`;
+    })
+    .catch(error => console.error(error));
+}, error => {
+  console.error(error);
+  document.getElementById("weather").textContent = "天気情報を取得できませんでした。";
+});
