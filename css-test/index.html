@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-Test</title>
+	<style>
+.box {
+	container-type: inline-size;
+	resize: horizontal;
+  overflow: auto;
+}
+@container (max-width: 499px) {
+  .box {
+	background-color: red;
+  }
+}
+
+@container (min-width: 500px) and (max-width: 799px) {
+  .box {
+	background-color: green;
+  }
+}
+
+@container (min-width: 800px) {
+  .box {
+	background-color: blue;
+  }
+}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>2023年4月現在、CSS Container Queriesはまだ完全に実装されておらず、多くのブラウザでサポートされていません。ただし、一部のブラウザでは実験的にサポートされている場合があります。</p>
+	</div>
+	<!-- /.box -->
+</body>
+</html>
