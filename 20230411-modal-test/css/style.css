@@ -69,20 +69,19 @@
   display: none; /* 最初は非表示 */
   position: fixed; /* 画面固定 */
   z-index: 9999; /* 他の要素より上に表示 */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* 背景を半透明に */
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  max-width: 600px;
+  transform: translate(-50%, -50%);
 }
 
 .modal-content {
   position: relative;
   margin: auto;
   padding: 20px;
-  width: 80%;
-  max-width: 600px;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -100,14 +99,13 @@
 
 /* 背景オーバーレイ */
 #overlay {
-  display: none; /* 最初は非表示 */
-  position: fixed; /* 画面固定 */
-  z-index: 9998; /* モーダルより下に表示 */
+  display: none;
+  position: fixed;
+  z-index: 9998; /* モーダルより手前に表示 */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 背景を半透明に */
+  background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-
