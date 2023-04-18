@@ -1,0 +1,122 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: sans-serif;
+    background-color: #eee;
+  }
+
+
+/* 20230410-test */
+
+.container {
+    box-sizing: border-box;
+    padding: 10px;
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+    max-width: 640px;
+    background-color: #fff;
+}
+
+.accordion {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .accordion-title {
+    padding: 10px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accordion-icon {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 10px;
+    transition: .3s ease-in-out;
+  }
+  .accordion-content.show {
+    display: block
+  }
+  
+
+  /* 20230411-test */
+  .disabled {
+    opacity: 0.5; /* 透明度を下げる */
+    pointer-events: none; /* イベントを無効化する */
+    cursor: default; /* カーソルをデフォルトにする */
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+  }
+
+  /* 20230418-test */
+  
+  .modal {
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 25px;
+    z-index: 2;
+    display: none;
+    transition: .3s ease;
+  }
+  
+  .modal-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .modal-open {
+    width: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    margin-inline: auto;
+  }
+  
+  .modal-content {
+    /* モーダルコンテンツのスタイルをここに追加 */
+  }
+  
