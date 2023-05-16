@@ -40,6 +40,15 @@ $(function() {
       $('body').append('<div class="overlay"></div>');
     }
   
+    // function adjustModalPosition() {
+    //   if ($modal && $triggerBtn) {
+    //     var triggerBtnOffset = $triggerBtn.offset();
+    //     $modal.css({
+    //       'left': triggerBtnOffset.left + 'px',
+    //       'top': triggerBtnOffset.top + 'px'
+    //     });
+    //   }
+    // }
   };
   
   modalFunc();
