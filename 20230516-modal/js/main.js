@@ -27,29 +27,27 @@ $(function() {
   
     });
   
-    $('.isCloseModal, .overlay').on('click', function () {
-      $modal.removeClass('isDisplay');
-      $('.overlay').remove();
-      $modal.removeAttr('style');
-      window.scrollTo(recordX, recordY);
-      $modal = null;
-      $triggerBtn = null;
+    $('.overlay').on('click', function () {
+      closeModal();
+    });
+  
+    $('.isCloseModal').on('click', function () {
+      closeModal();
     });
   
     function createOverlay() {
       $('body').append('<div class="overlay"></div>');
     }
   
-    // function adjustModalPosition() {
-    //   if ($modal && $triggerBtn) {
-    //     var triggerBtnOffset = $triggerBtn.offset();
-    //     $modal.css({
-    //       'left': triggerBtnOffset.left + 'px',
-    //       'top': triggerBtnOffset.top + 'px'
-    //     });
-    //   }
-    // }
+    function closeModal() {
+      $('.overlay').remove();
+      $modal.removeClass('isDisplay');
+      window.scrollTo(recordX, recordY);
+      $modal = null;
+      $triggerBtn = null;
+    }
   };
+  
   
   modalFunc();
 
