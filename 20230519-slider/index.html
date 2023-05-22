@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <!-- Place your kit's code here -->
+            <script src="https://kit.fontawesome.com/e037451fcf.js" crossorigin="anonymous"></script>
+
+  <style>
+    .carousel-container {
+      position: relative;
+      width: 500px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 40px;
+    }
+
+    .carousel-arrow.left {
+      left: 10px;
+    }
+
+    .carousel-arrow.right {
+      right: 10px;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .carousel-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .carousel-indicator.active {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+    <i class="fa-solid fa-thumbs-up fa-5x"></i>
+</div>
+
+
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-slide">Slide 1</div>
+      <div class="carousel-slide">Slide 2</div>
+      <div class="carousel-slide">Slide 3</div>
+      <div class="carousel-slide">Slide 4</div>
+    </div>
+    <div class="carousel-arrow left" style="display: none;">&lt;</div>
+    <div class="carousel-arrow right">&gt;</div>
+    <div class="carousel-indicators"></div>
+  </div>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+      var track = document.querySelector('.carousel-track');
+      var slides = Array.from(document.querySelectorAll('.carousel-slide'));
+      var leftArrow = document.querySelector('.carousel-arrow.left');
+      var rightArrow = document.querySelector('.carousel-arrow.right');
+      var indicatorsContainer = document.querySelector('.carousel-indicators');
+
+      var slideWidth = slides[0].offsetWidth;
+      var slideIndex = 0;
+
+      leftArrow.addEventListener('click', function() {
+        slideIndex--;
+        updateCarousel();
+      });
+
+      rightArrow.addEventListener('click', function() {
+        slideIndex++;
+        updateCarousel();
+      });
+
+      function createIndicators() {
+        slides.forEach(function(_, index) {
+          var indicator = document.createElement('div');
+          indicator.classList.add('carousel-indicator');
+          indicatorsContainer.appendChild(indicator);
+
+          indicator.addEventListener('click', function() {
+            slideIndex = index;
+            updateCarousel();
+          });
+        });
+      }
+
+      function updateIndicators() {
+        var indicators = Array.from(document.querySelectorAll('.carousel-indicator'));
+
+        indicators.forEach(function(indicator, index) {
+          if (index === slideIndex) {
+            indicator.classList.add('active');
+          } else {
+            indicator.classList.remove('active');
+          }
+        });
+    }
+
+
+  function updateCarousel() {
+    track.style.transform = 'translateX(' + (-slideIndex * slideWidth) + 'px)';
+    leftArrow.style.display = slideIndex === 0 ? 'none' : 'block';
+    rightArrow.style.display = slideIndex === slides.length - 1 ? 'none' : 'block';
+    updateIndicators();
+  }
+
+  createIndicators();
+  updateCarousel();
+});
+</script>
+</body>
+</html>
