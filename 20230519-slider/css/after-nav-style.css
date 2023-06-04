@@ -1,0 +1,410 @@
+/* PC用スタイル */
+.bannerBlock {
+	margin: 15px 0;
+}
+
+.linkState a {
+	display: block;
+	text-decoration: none !important;
+}
+
+.gamificationInfoBlock_item > a {
+	color: #6c6c6c;
+	text-decoration: none;
+}
+
+.linkStatea:active,
+.linkStatea:hover {
+	display: block;
+	text-decoration: none !important;
+}
+
+.gamificationInfoBlock_item > a:active,
+.gamificationInfoBlock_item > a:hover {
+	color: #6c6c6c;
+	text-decoration: none;
+}
+
+.gamificationNavTop-block {
+	border-bottom: 3px solid #ec6890;
+	border-collapse: separate;
+	border-spacing: 6px 0;
+	display: table;
+	margin-top: 10px;
+	position: relative;
+	width: 100%;
+}
+
+.gamification-nav-top-block__item {
+	display: table-cell;
+	position: relative;
+	top: 3px;
+}
+
+.gamificationNavTopBlock .current-state {
+	background-color: #fff;
+	border: 3px solid #ec6890;
+	border-bottom: 6px #fff;
+	border-radius: 7px 7px 0 0;
+	padding: 0;
+}
+
+.gamificationNavTopBlock .current-state:before {
+	background: #fff;
+	bottom: -2px;
+	content: "";
+	height: 5px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.gamificationNavTopBlock .linkState {
+	background-position: 0 8px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-bottom: 3px solid #ec6890;
+	padding: 6px 0 2px 0;
+}
+
+@media screen and (min-width: 769px) {
+	.gamificationNavTopBlock .linkState {
+		padding: 8px 5px;
+	}
+}
+
+.gamificationNavBottomBlock {
+	border-collapse: separate;
+	border-spacing: 6px 0;
+	border-top: 3px solid #ec6890;
+	display: table;
+	margin-bottom: 10px;
+	position: relative;
+	width: 100%;
+}
+
+.gamificationNavBottomBlock__item {
+	display: table-cell;
+	position: relative;
+	top: -3px;
+}
+
+.gamificationNavBottomBlock .currentState {
+	background-color: #fff;
+	border: 3px solid #ec6890;
+	border-radius: 0 0 7px 7px;
+	border-top: 6px #fff;
+	padding: 0 0 2px 0;
+}
+
+.gamificationNavBottomBlock .currentState:before {
+	background: #fff;
+	content: "";
+	height: 5px;
+	left: 0;
+	position: absolute;
+	top: -2px;
+	width: 100%;
+}
+
+.gamificationNavBottomBlock .linkState {
+	background-position: 0 -5px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-top: 3px solid #ec6890;
+	padding: 0 0 8px 0;
+	position: relative;
+}
+.gamificationNavTopBlock.col3 .currentState {
+    width: 33%;
+}
+
+.gamificationNavTopBlock.col3 .linkState{
+    background-image: url(../img/bg_gamification_top_col3.png);
+    width: 30%;
+}
+
+@media screen and (min-width: 769px) {
+    .gamificationNavTopBlock.col3 .linkState{
+        background-position: 0 14px;
+    }
+}
+
+.gamificationNavTopBlock.col4 .currentState {
+    width: 22%;
+}
+
+.gamificationNavTopBlock.col4 .linkState{
+    background-image: url(../img/bg_gamification_top_col4.png);
+    width: 20%;
+}
+
+@media screen and (min-width: 769px) {
+    .gamificationNavTopBlock.col4 .linkState{
+        background-position: 0 12px;
+    }
+}
+
+.updateIcon {
+    height: auto;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 20px;
+}
+
+@media screen and (min-width: 769px) {
+    .updateIcon {
+        width: 30px;
+    }
+}
+
+.gamification-info-block {
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding-right: 5px;
+}
+
+.gamification-info-block + nav {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.gamificationInfoBlock_item {
+    line-height: 130%;
+    margin-bottom: 10px;
+}
+
+.gamificationInfoBlock_item:last-child {
+    margin-bottom: 0;
+}
+
+.gamification-info-txt-block {
+    background-color: #fff;
+    box-shadow: #d3d3d3 0 2px 1px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.gamification-info-txt-item {
+    box-sizing: border-box;
+    color: #6c6c6c;
+    display: inline-block;
+    line-height: 1.4em;
+    margin: 0 8px;
+    padding-left: 1em;
+    position: relative;
+}
+
+.gamification-info-txt-item::before {
+    border-color: transparent transparent transparent #cf0f31;
+    border-style: solid;
+    border-width: .4em 0 .4em .8em;
+    content: "";
+    display: inline-block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 3%;
+    transform: translateY(.1em);
+    width: 0;
+}
+
+.tab-col4-icon {
+    position: relative;
+}
+
+.tab-col4-icon-image {
+    left: 6%;
+    position: absolute;
+    top: 8%;
+    width: 27%;
+}
+
+.gamificationNavTop {
+    border-bottom: 3px solid #ec6890;
+    border-collapse: separate;
+    border-spacing: 6px 0;
+    display: table;
+    position: relative;
+    width: 100%;
+}
+
+.gamificationNavTop__item {
+    display: table-cell;
+    position: relative;
+    top: 3px;
+}
+.gamificationNavTop .currentState {
+    background-color: #fff;
+    border: 3px solid #ec6890;
+    border-bottom: 6px #fff;
+    border-radius: 7px 7px 0 0;
+    padding: 0;
+}
+
+.gamificationNavTop .linkState{
+    background-position: 0 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-bottom: 3px solid #ec6890;
+    padding: 6px 0 2px 0;
+}
+
+@media screen and (min-width: 769px) {
+    .gamificationNavTop .linkState{
+        padding: 8px 5px;
+    }
+}
+
+.gamificationNavTop.col3 .currentState {
+    width: 33%;
+}
+
+.gamificationNavTop.col3 .linkState{
+    background-image: url(../img/bg_gamification_top_col3.png);
+    width: 30%;
+}
+
+@media screen and (min-width: 769px) {
+    .gamificationNavTop.col3 .linkState{
+        background-position: 0 14px;
+    }
+}
+
+.gamificationNavTop.col4 .currentState {
+    width: 22%;
+}
+
+.gamificationNavTop.col4 .linkState{
+    background-image: url(../img/bg_gamification_top_col4.png);
+    width: 20%;
+}
+
+@media screen and (min-width: 769px) {
+    .gamificationNavTop.col4 .linkState{
+        background-position: 0 12px;
+    }
+}
+
+.gamificationNavTop .updateIcon {
+    height: auto;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 20px;
+}
+
+@media screen and (min-width: 769px) {
+    .gamificationNavTop .updateIcon {
+        width: 30px;
+    }
+}
+
+.gamificationNavBottom {
+    border-collapse: separate;
+    border-spacing: 6px 0;
+    border-top: 3px solid #ec6890;
+    display: table;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.gamificationNavBottom__item {
+    display: table-cell;
+    position: relative;
+    top: -3px;
+}
+
+.gamificationNavBottom .currentState {
+    background-color: #fff;
+    border: 3px solid #ec6890;
+    border-radius: 0 0 7px 7px;
+    border-top: 6px #fff;
+    padding: 0 0 2px 0;
+}
+
+.gamificationNavBottom .linkState{
+    background-position: 0 -5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-top: 3px solid #ec6890;
+    padding: 0 0 8px 0;
+    position: relative;
+}
+
+@media screen and (min-width: 769px) {
+    .gamificationNavBottom .linkState{
+        padding: 8px 5px;
+    }
+}
+
+.gamificationNavBottom .linkStatea {
+    transform: translateY(-3px);
+}
+
+.gamificationNavBottom.col3 .currentState {
+    width: 33%;
+}
+
+.gamificationNavBottom.col3 .linkState{
+	background-image: url(../img/bg_gamification_bottom_col3.png);
+	width: 30%;
+}
+@media screen and (min-width: 769px) {
+    .gamificationNavBottom.col3 .linkState{
+        background-position: 0 -8px;
+    }
+}
+
+.gamificationNavBottom.col4 .currentState {
+    width: 22%;
+}
+
+.gamificationNavBottom.col4 .linkState{
+    background-image: url(../img/bg_gamification_bottom_col4.png);
+    width: 20%;
+}
+
+@media screen and (min-width: 769px) {
+    .gamificationNavBottom.col4 .linkState{
+        background-position: 0 -12px;
+    }
+}
+
+@media screen and (min-width: 568px) {
+    .tab-col4-icon-image {
+        top: 5%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .tab-col4-icon-image {
+        top: 6%;
+    }
+}
+
+.tab-col4-icon-image-ac {
+    left: 6%;
+    position: absolute;
+    top: -6%;
+    width: 27%;
+}
+
+@media screen and (min-width: 568px) {
+    .tab-col4-icon-image-ac {
+        top: -4%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .tab-col4-icon-image-ac {
+        top: -3%;
+    }
+}
+
+
+.ccdd{
+    padding: 0;
+}
