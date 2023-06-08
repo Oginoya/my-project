@@ -1,0 +1,27 @@
+:root {
+  --main-bg-color: orange;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.btn {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  background-color: var(--main-bg-color);
+  color: #fff;
+  width: 150px;
+}
+/*# sourceMappingURL=style.css.map */
