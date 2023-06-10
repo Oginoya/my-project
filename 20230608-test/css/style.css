@@ -1,0 +1,39 @@
+/* Page Style */
+
+body {
+	background-color: #ebebeb;
+}
+
+.l-g-container {
+	width: 100%;
+	max-width: 750px;
+	margin: auto;
+	background-color: #fff;
+	height: calc(100vh - 40px);
+}
+
+
+
+.l-g-footer__copy {
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 40px;
+	max-width: 750px;
+	margin: -40px auto 0;
+	background-color: red;
+
+}
+
+.l-g-copy-right {
+	font-size: .8571rem;
+	color: #fff;
+}
+
+.jj {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	clip-path: polygon(5% 5%, 95% 50%, 100% 50%, 5% 100%);
+}
